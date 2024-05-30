@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #d66b4e;
     color: white;
     padding: 1rem 2rem;
     display: flex;
@@ -13,13 +13,21 @@ header {
     align-items: center;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 .logo img {
-    height: 50px; /* Adjust the height as necessary */
+    height: 100px; /* Adjust the height as necessary */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    margin-left: auto; /* Push the navigation to the right */
 }
 
 .nav-links li {
@@ -39,7 +47,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: white;
     text-align: center;
 }
 
