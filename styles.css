@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -11,68 +13,132 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick it to the top of the viewport */
+    z-index: 1000; /* Ensure it's above other content */
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .logo img {
-    height: 100px; /* Adjust the height as necessary */
+  height: 50px; /* Adjust the height as necessary */
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    margin-left: auto; /* Push the navigation to the right */
+  list-style: none;
+  display: flex;
+  margin-left: auto; /* Push the navigation to the right */
 }
 
 .nav-links li {
-    margin-left: 2rem;
+  margin-left: 2rem;
 }
 
 .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .hero {
-    background: url('hero.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
+  background: url("https://github.com/jepery/AdrianaSkinCare/blob/main/images/hero.png?raw=true")
+    no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin: 0;
+  font-size: 3rem;
+  margin: 0;
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin: 1rem 0;
+  font-size: 1.5rem;
+  margin: 1rem 0;
 }
 
 .hero button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #d66b4e;
+  color: white;
+  cursor: pointer;
+  margin-top: 10rem;
+}
+
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+h2{
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#about {
+  background-color: #f5caaa;
+}
+
+#products {
+  background-color: #ffe9c9;
+}
+
+.about-text button {
     padding: 1rem 2rem;
     font-size: 1rem;
     border: none;
-    background-color: #e91e63;
+    background-color: #d66b4e;
     color: white;
     cursor: pointer;
 }
 
-section {
-    padding: 4rem 2rem;
-    text-align: center;
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.about-text {
+    text-align: left;
+    line-height: 1.5; /* Increased line height for better readability */
+}
+
+.about-image {
+    flex: 1;
+    text-align: center; /* Center the image horizontally */
+}
+
+.about-image img {
+    width: 40vw;
+    border-radius: 10px; /* Optional: Add some border radius for styling */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the image */
 }
 
 .product-container {
@@ -88,16 +154,323 @@ section {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     max-width: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Move the card slightly upwards on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow effect on hover */
 }
 
 .product-card img {
     max-width: 100%;
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* Add transition for smoother hover effect */
+}
+
+.product-card:hover img {
+    transform: scale(1.1); /* Scale the image slightly on hover */
+}
+
+.product-card h3 {
+    margin-top: 1rem; /* Add some space between the image and the title */
+}
+
+#blog {
+    background-color: #f5caaa;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#blog h2 {
+    font-family: "Poetsen One", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.blog-post {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h3 {
+    font-size: 1.5rem;
+}
+
+.blog-post p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.blog-post a {
+    color: #d66b4e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog-post a:hover {
+    text-decoration: underline;
+}
+
+#contact {
+    background-color: #ffe9c9;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: black;
+}
+
+#contact h2 {
+    font-family: "Poetsen One", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input[type="submit"] {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #d66b4e;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #f5caaa;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-info div {
+    flex: 1;
+}
+
+.contact-info i {
+    font-size: 2rem;
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-form,
+    .contact-info {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        margin-top: 1rem;
+    }
 }
 
 footer {
-    background-color: #333;
-    color: white;
+  background-color: #d66b4e;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Navbar adjustments */
+    header {
+        padding: 0.8rem 1rem; /* Reduce padding */
+    }
+
+    .logo img {
+        height: 40px; /* Reduce logo size */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center; /* Center align navigation links */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .nav-links li {
+        margin: 1rem 0; /* Add margin between navigation links */
+    }
+
+    /* Hero adjustments */
+    .hero h1 {
+        font-size: 2.5rem; /* Decrease font size */
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Decrease font size */
+    }
+
+    .hero button {
+        margin-top: 5rem; /* Adjust margin top */
+    }
+
+    /* About section adjustments */
+    .about-content {
+        flex-direction: column; /* Stack content vertically */
+        gap: 2rem; /* Adjust gap */
+    }
+
+    .about-image img {
+        width: 80%; /* Make image width larger */
+    }
+
+    /* Blog section adjustments */
+    .blog-post {
+        padding: 1.5rem; /* Adjust padding */
+    }
+
+    .blog-post h3 {
+        font-size: 1.2rem; /* Decrease font size */
+    }
+
+    .blog-post p {
+        font-size: 1rem; /* Decrease font size */
+    }
+
+    /* Contact section adjustments */
+    #contact h2 {
+        font-size: 1.8rem; /* Decrease font size */
+    }
+
+    .contact-form,
+    .contact-info {
+        margin: 0; /* Remove margins */
+    }
+
+    .contact-info {
+        flex-direction: column; /* Stack content vertically */
+        gap: 1rem; /* Adjust gap */
+    }
+
+    .contact-info div {
+        flex: none; /* Remove flex grow */
+    }
+}
+
+.menu-toggle {
+    display: none; /* Hide by default */
+}
+
+/* Hamburger menu styling */
+.menu-toggle input {
+    display: none;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Rotate first and third spans for cross effect */
+.menu-toggle input:checked + span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle input:checked + span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle input:checked + span:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* Show nav links when hamburger is checked */
+.menu-toggle input:checked ~ .nav-links {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #d66b4e;
+    padding: 1rem;
     text-align: center;
-    padding: 1rem 0;
+    z-index: 999;
+}
+
+.menu-toggle input:checked ~ .nav-links li {
+    margin-top: 1rem;
+}
+
+/* Media query for screens smaller than 768px (typical mobile devices) */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show the hamburger menu */
+    }
+
+    .nav-links {
+        display: none; /* Hide the nav links by default */
+    }
+}
+
+.menu-toggle input[type="checkbox"] {
+    display: none;
+}
+
+.menu-toggle label {
+    display: block;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle input:checked + label span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle input:checked + label span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle input:checked + label span:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+}
+
+.menu-toggle input:checked ~ .nav-links {
+    display: block;
 }
